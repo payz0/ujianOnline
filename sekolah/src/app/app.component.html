@@ -1,0 +1,162 @@
+<header >
+<h3 style="    font-family: none;
+text-shadow: 2px 2px 2px #7a7a7a;
+color: #efefef;
+font-weight: bold;">SMP Negeri 1 Arut Selatan</h3>
+</header>
+<img class="imgBg" src="https://yt3.ggpht.com/ytc/AKedOLTVA4V4_1tk4749CbpKkv1QTovufjNrXg39peqf=s900-c-k-c0x00ffffff-no-rj" alt="">
+<div class="container-fluid" *ngIf="!sedangUjian">
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 menu-login text-center" style="background: white;position: relative;">
+        <img class="logo" src="https://siap-sekolah.s3.amazonaws.com/6420/files/2013/12/LOGO-SMP-NEGERI-1-ARUT-SELATAN.jpg" alt="">
+        <b>Ujian Akhir Semester</b><br>
+        Mata Pelajaran <br><h3 style="color:#0094ff">{{jadwal.mapel}}</h3>
+      
+      <label for="" *ngIf="jadwal.mapel == 'Agama'">Pilih Agama</label>
+      <select class="form-control text-center" *ngIf="jadwal.mapel == 'Agama'" [(ngModel)]="mapelAgama">
+        <option *ngFor="let agama of jadwal.kelas[7].agama; let i = index" value="{{i}}">{{agama}}</option>
+      </select>
+
+      <i *ngIf="jatahUjian && !closeUjian">{{sesi}}</i>
+      <i *ngIf="closeUjian">Ujian sudah di tutup</i>
+      <hr>
+      <label for="">Pilih Soal Kelas</label>
+      <select [(ngModel)]="kelas" class="form-control text-center" (change)="loadJson()">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <label for="">Masukkan token</label>
+      <input type="text" placeholder="TOKEN" class="form-control text-center" [(ngModel)]="tokenMasuk">
+      <button (click)="mulai()" class="btn btn-sm btn-primary" style="margin-top: 7px;width: 100%;border-radius: 30px;">Mulai</button>
+      <i>Lihat jadwal <u style="color: blue; cursor: pointer;" (click)="lihatJadwal = true">Klik disini</u></i> 
+            <!-- dialog box -->
+      <div class="box" *ngIf="cekToken">
+        <h3 [style]="{'color': warna}">{{pesan}}</h3>
+      </div>
+     <div style="font-size: 8pt;font-style: italic;border: 1px solid;">
+       <u>Perhatian :</u>
+       <br>
+       Sebelum mulai siswa sudah login dengan akun gmail.com atau akun belajar.id
+     </div>
+     <div class="box-token" *ngIf=boxToken>
+       <div style="    text-align: right;
+       position: absolute;
+       top: 0px;cursor: pointer;
+       right: 8px;">
+         <span (click)="boxToken = false">&times;</span>
+       </div>
+       <i style="    font-size: 12pt;
+       color: #456d8b;">Cek token</i><br>
+      <span class="btn btn-sm btn-secondary" (click)="kelas = 7;loadJson()">7</span><span class="btn btn-sm btn-secondary" (click)="kelas = 8;loadJson()">8</span><span class="btn btn-sm btn-secondary" (click)="kelas = 9;loadJson()">9</span>
+      <div style="    display: flex;align-items: baseline;" *ngIf="!getToken && token != '************'">
+        <input [(ngModel)]="passwordToken" type="password" class="form-control" placeholder="password" style="margin-bottom: 9px;">
+        <button class="btn btn-sm btn-secondary" style="margin-left: 3px;" (click)="tampilToken()">Ok</button>
+      </div>
+      <br>
+      <span *ngIf="getToken" style="    font-size: 9pt;
+      color: #2424a3;
+      font-style: italic;"> Token kelas {{kelas}} <br><b style="     font-size: 14pt;
+      background: white;
+      padding: 2px 24px;
+      border: 2px inset;
+      color: green;
+      border-radius: 16px;"> {{token}} </b> </span>
+    </div>
+    </div>
+    <div class="col-sm-4">
+        <button class="btn btn-sm btn-success btn-token" (click)="boxToken = true">View Token</button>
+    </div>
+  </div>
+
+  <!-- jadwal -->
+  <div class="jadwal" *ngIf="lihatJadwal">
+    <div style="text-align: right;" >
+      <span style="cursor: pointer;" (click)="lihatJadwal = false">&times;</span>
+    </div>
+    Jadwal Ujian Akhir Semester
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Kelompok / Jam</th>
+            <!-- <th>Sesi 2</th> -->
+            <th>Mapel</th>
+          </tr>
+        </thead>
+        <tbody   >
+          <tr *ngFor="let jad of allJadwal; let i = index">
+            <td style="vertical-align: middle;"> <span *ngIf="jad.jadwal != null"> {{i+1}}</span>
+              <!-- <span *ngIf="jad.jadwal == null"> {{i}}</span> -->
+            </td>
+            <td style="vertical-align: middle;text-align:left;padding-left: 4px;">{{jad.jadwal | tgl}}</td>
+            <td >
+              <table class="table table-bordered" style="font-size: 10pt;margin: 0px;">
+                <tr *ngFor="let ses of jad.sesi; let a = index" >
+                  <td *ngIf="jad.jadwal != null" >{{klompok[a]}}</td>
+                  <td *ngIf="jad.jadwal != null">{{ses.jam}}</td>
+                  <td *ngIf="jad.jadwal == null" >{{klompok[a]}} </td>
+                  <td *ngIf="jad.jadwal == null">{{ses.jam}}</td>
+                </tr>
+              </table>
+            </td>
+            <td style="vertical-align: middle;">{{jad.mapel}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- isi ujian -->
+<div class="container-fluid" *ngIf="sedangUjian" style="padding-top: 75px;" >
+  Soal {{jadwal.mapel}}  {{namaAgama}}
+  <div class="row soal">
+    <div style="    text-align: right;
+    background: #e3e3e3;
+    font-size: 10pt;
+    color: #af5454;">
+    <div style="    display: flex;
+    flex-direction: column;
+    align-items: flex-end;">
+      <b style="    background: red;
+      padding: 2px 5px;
+      color: white;
+      font-size: 8pt;
+      margin-right: 0px;
+      width: 61px;
+      text-align: center;
+      transform: skewX(10deg);
+      box-shadow: -5px 5px 15px -3px black;">
+        {{nyontek}} kali
+      </b>
+      <span style="    background: #681212;
+      padding: 3px;
+      margin-top: 0px;
+      width: 61px;
+      text-align: center;
+      color: #838383;
+      font-size: 8pt;
+      transform: skewX(-10deg);">
+        Curang
+      </span>
+    </div>
+  </div>
+    <div class="tersiswaWaktu" *ngIf="tersisaWaktu">
+      <b class="sisaMenit">
+      {{peringatanSisa}}
+      </b>
+       <span *ngIf="width != '0%'">menit!</span> 
+    </div>
+
+    <div class="timer">{{menit}} : {{detik}}</div>
+    
+    <span *ngIf="width != '0%'" [style]="{'width':width}" style="background: red;height: 4px;">
+      
+    </span>
+    <div [innerHTML]="domHtml | safe: 'html'"></div>
+    <!-- <iframe [src]="{{urlSoal | safe : 'html'}}" width='100%' height='600' frameborder='0'marginheight='0' marginwidth='0'>Loading…</iframe> -->
+  </div>
+</div>
