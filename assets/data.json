@@ -1,0 +1,316 @@
+[
+  { 
+    "mapel": "Agama",
+     "jadwal": "11-8-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link": [
+                    "1FAIpQLSfqJCksIbBKFEOZAo3IjUXJuH5JmWndGGDaBRB-9rPg-Rf8uw", 
+                    "1FAIpQLSfgp0Q-VpIhNSEc4q6rhZ0qf18TcGbG-cms3jdv5srGc_xfAA", 
+                    "1FAIpQLSdb1zTk0zSLFvoEE6rVygfom2ybFV4G2fP6D-r6XBEBWyJ_ZQ", 
+                    "",
+                    "" 
+                ],
+                "agama":[
+                      "Islam",
+                      "Protestan",
+                      "Katolik",
+                      "Budha",
+                      "Hindu"
+                ],
+                "token":["KLS71","KLS72"]
+              },
+            "8":{
+                 "link": [
+                    "1FAIpQLSce3nzG39YkRtmBVYRv71BSheifEG51RNY0pSbd7hPnY_SHZA", 
+                    "1FAIpQLSchpJtH1UzS_Yks_dZBcV2QPqt6Lw42zptGt0M80GhJABIH6Q", 
+                    "1FAIpQLScyDhQ0adso1IMc-5r1guJ6zkKguvTHSJgRZuLjlDgYHU7OsQ", 
+                    "1FAIpQLScAv8Ux-W4g0kTWzYgHo5HbGpM7IRbf0q1IlL9RJbEwb6za7Q", 
+                    ""
+                    ],
+                 "agama":[
+                        "Islam",
+                        "Protestan",
+                        "Katolik",
+                        "Budha",
+                        "Hindu"
+                    ],
+                  "token":["KLS81","KLS82"]
+              },
+            "9":{
+                 "link": [
+                    "1FAIpQLSf4gZPQ1qMIegzcmBqhzeAIt9uej5E_JfR6cemNci7YO02bhg", 
+                    "1FAIpQLSeZHztuoQk-bSca8SP_g5vFHvvVqzZr1-9XNJFXmDUG6-GG3w", 
+                    "1FAIpQLSfgZR7sBq5T93znECmkUkGyEGkceP73fK1IgESWIHd0KowgLw", 
+                    "", 
+                    "1FAIpQLSd7IlLkwdlnTIjq7X8gL00EOXLvWUN60vnlJsRDBPVx4Tce5A" 
+                    ],
+                  "agama":[
+                        "Islam",
+                        "Protestan",
+                        "Katolik",
+                        "Budha",
+                        "Hindu"
+                    ],
+                  "token":["KLS91","KLS92"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "15:02"
+      },
+      {
+        "jam": "22:30"
+      }]
+  },
+{
+    "mapel": "PKn",
+     "jadwal": "11-8-2021",
+    "durasi": 10,
+    "kelas":{
+            "7":{
+                "link":"1FAIpQLScI42HtxBXt0bRSSpBYFdG9HyOZYxDu80FrtydgIgzTBGYTXg",
+                "token":["SKK71","SKK72"]
+              },
+            "8":{
+                "link":"1FAIpQLSczAhNEMhmYGZyfXzCRvhUMjoQYCvT1G_UPOZHoT8QWrNCl1A",
+                "token":["SKK81","SKK82"]
+              },
+            "9":{
+                "link":"1FAIpQLSczooJ8kapGAW_tGuljBOyaChh1PeI80MthoBpaw1F77QPxig",
+                "token":["SKK91","SKK92"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:22"
+      },
+      {
+        "jam": "13:05"
+      }
+    ]
+  },
+
+  {
+    "mapel": "Bahasa Indonesia",
+     "jadwal": "11-10-2021",
+    "durasi": 4,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["BHS71","BHS72"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["BHS81","BHS82"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["BHS91","BHS92"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:05"
+      }
+    ]
+  },
+  {
+    "mapel": "Bahasa Inggris",
+     "jadwal": "11-10-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  },
+  {
+    "mapel": "IPA",
+     "jadwal": "11-11-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  },
+
+  {
+    "mapel": "IPS",
+     "jadwal": "11-9-2021",
+    "durasi": 6,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  },
+
+  {
+    "mapel": "Matematika",
+     "jadwal": "11-13-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  },
+
+  {
+    "mapel": "Seni Budaya",
+     "jadwal": "11-13-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "5:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  },
+
+  {
+    "mapel": "Prakarya",
+     "jadwal": "11-15-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  },
+  {
+    "mapel": "Pendidikan Jasmani dan Olah raga",
+     "jadwal": "11-15-2021",
+    "durasi": 90,
+    "kelas":{
+            "7":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "8":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              },
+            "9":{
+                "link":"wwww",
+                "token":["SKK","sdfdsf"]
+              }
+        },
+    "sesi": [
+      {
+        "jam": "7:30"
+      },
+      {
+        "jam": "9:30"
+      }
+    ]
+  }
+
+]
